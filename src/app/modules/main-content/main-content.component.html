@@ -1,0 +1,68 @@
+<p>Start editing to see some magic happen :)</p>
+
+<div class="accordeons">
+  <div>
+    <h2 role="button" (click)="toggle($event)">angular course details</h2>
+    <div #accordeon class="hidden">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
+      </p>
+      <img
+        src="https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        width="100%"
+        height="600px"
+      />
+
+      <app-create-post></app-create-post>
+    </div>
+  </div>
+
+  <div>
+    <h2 role="button" (click)="toggle($event)">
+      Machine learning course details
+    </h2>
+    <div #accordeon class="hidden">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
+      </p>
+      <img
+        src="https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        width="100%"
+        height="400px"
+      />
+
+      <app-create-post></app-create-post>
+      <!---- <picture>
+        <source media="(min-width: 1000px)" srcset="slides[0].src" />
+        <source media="(max-width: 500px)" srcset="silides[1].src" />
+        <img src="slides[2].src" alt="My logo" />
+      </picture>
+    --></div>
+  </div>
+
+  <div>
+    <h2 role="button" (click)="toggle($event)">Deep learning crash course</h2>
+    <div #accordeon class="hidden">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <h2 (click)="toggle($event)">arduino crash course deatil</h2>
+    <div #accordeon class="hidden">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
+      </p>
+    </div>
+  </div>
+</div>

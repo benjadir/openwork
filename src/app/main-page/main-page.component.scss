@@ -1,0 +1,66 @@
+/*.col-md-12 {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgb(210, 226, 236) 100%
+  );
+  border-radius: 4px !important;
+  height: 150px !important;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3) !important;
+  margin-bottom: 15px !important;
+  margin-top: 10px !important;
+}*/
+:host {
+  width: 100%;
+}
+.container1 {
+  width: 100% !important;
+}
+.card {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2) !important;
+  border: none;
+
+  padding: 10px !important;
+  margin: 0rem;
+  // height: 600px !important;
+  width: inherit;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 15px !important;
+}
+.card2 {
+  position: fixed;
+  top: 0px;
+  z-index: -10;
+  height: 99vh;
+}
+.card-header {
+  background-color: white !important;
+}
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.carousel-container {
+  display: block;
+  height: 500px;
+  width: 500px;
+  padding: 2em;
+}
+@media only screen and (max-width: 700px) {
+}
+
+/*
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+*/
