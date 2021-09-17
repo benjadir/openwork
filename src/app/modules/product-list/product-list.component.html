@@ -1,6 +1,6 @@
 <div class="row text-warning">
   <div
-    *ngFor="let item of items"
+    *ngFor="let item of usedItems"
     class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
   >
     <app-product-item
@@ -11,6 +11,8 @@
     </app-product-item>
   </div>
 </div>
-<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
-</mat-paginator>
-<router-outlet></router-outlet>
+<div class="row d-flex justify-content-center">
+  <button class="btn btn-light" (click)="nextpage('next')">next</button>
+  <button class="btn btn-light px-4">5</button>
+  <button class="btn btn-light" (click)="prevpage('prev')">prev</button>
+</div>
