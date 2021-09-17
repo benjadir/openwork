@@ -1,0 +1,16 @@
+<div class="row text-warning">
+  <div
+    *ngFor="let item of items"
+    class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12"
+  >
+    <app-product-item
+      [image]="item.src"
+      [title]="item?.title"
+      [prix]="item.prix"
+    >
+    </app-product-item>
+  </div>
+</div>
+<mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+</mat-paginator>
+<router-outlet></router-outlet>

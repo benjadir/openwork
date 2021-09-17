@@ -6,6 +6,9 @@ p {
 .accordeons > div {
   height: 100%;
   max-height: 9999px;
+  position: relative;
+  left: 1%;
+  right: 30%;
   overflow: hidden;
   border: none;
   margin-top: -1px;

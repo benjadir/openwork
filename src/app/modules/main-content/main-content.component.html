@@ -2,9 +2,11 @@
 
 <div class="accordeons">
   <div>
-    <h2 role="button" (click)="toggle($event)">angular course details</h2>
+    <h2 role="button" (click)="toggle($event)" class="text-align-center">
+      angular course details
+    </h2>
     <div #accordeon class="hidden">
-      <p>
+      <p class="text-align-center ml-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
         enim magnam iusto aut architecto sint hic natus? Sunt velit ab
         assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
@@ -12,19 +14,26 @@
       <img
         src="https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         width="100%"
-        height="600px"
+        height="40%px"
       />
-
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos
+        exercitationem.<br />
+      </p>
+      <br />
+      <hr />
       <app-create-post></app-create-post>
     </div>
   </div>
 
   <div>
-    <h2 role="button" (click)="toggle($event)">
+    <h2 role="button" (click)="toggle($event)" class="text-align-center">
       Machine learning course details
     </h2>
     <div #accordeon class="hidden">
-      <p>
+      <p class="text-align-center ml-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
         enim magnam iusto aut architecto sint hic natus? Sunt velit ab
         assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
@@ -32,10 +41,21 @@
       <img
         src="https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         width="100%"
-        height="400px"
+        height="40%"
       />
-
-      <app-create-post></app-create-post>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
+        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
+        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
+      </p>
+      <br />
+      <hr />
+      <h2 role="button" (click)="toggle($event)" class="text-align-center">
+        show images
+      </h2>
+      <div #accordeon class="hidden">
+        <app-create-post></app-create-post>
+      </div>
       <!---- <picture>
         <source media="(min-width: 1000px)" srcset="slides[0].src" />
         <source media="(max-width: 500px)" srcset="silides[1].src" />
@@ -45,24 +65,114 @@
   </div>
 
   <div>
-    <h2 role="button" (click)="toggle($event)">Deep learning crash course</h2>
+    <h2 role="button" (click)="toggle($event)" class="text-align-center">
+      Deep learning crash course
+    </h2>
     <div #accordeon class="hidden">
-      <p>
+      <p class="text-align-center ml-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
         enim magnam iusto aut architecto sint hic natus? Sunt velit ab
         assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
       </p>
+      <pre class="line-numbers">
+        <code class="language-python">
+            # Python program for Dijkstra's single
+            # source shortest path algorithm. The program is
+            # for adjacency matrix representation of the graph
+            
+            # Library for INT_MAX
+            import sys
+            
+            class Graph():
+            
+                def __init__(self, vertices):
+                    self.V = vertices
+                    self.graph = [[0 for column in range(vertices)]
+                                for row in range(vertices)]
+            
+                def printSolution(self, dist):
+                    print("Vertex tDistance from Source")
+                    for node in range(self.V):
+                        print(node, "t", dist[node])
+            
+                # A utility function to find the vertex with
+                # minimum distance value, from the set of vertices
+                # not yet included in shortest path tree
+                def minDistance(self, dist, sptSet):
+            
+                    # Initialize minimum distance for next node
+                    min = sys.maxsize
+            
+                    # Search not nearest vertex not in the
+                    # shortest path tree
+                    for v in range(self.V):
+                        if dist[v] < min and sptSet[v] == False:
+                            min = dist[v]
+                            min_index = v
+            
+                    return min_index
+            
+                # Funtion that implements Dijkstra's single source
+                # shortest path algorithm for a graph represented
+                # using adjacency matrix representation
+                def dijkstra(self, src):
+            
+                    dist = [sys.maxsize] * self.V
+                    dist[src] = 0
+                    sptSet = [False] * self.V
+            
+                    for cout in range(self.V):
+            
+                        # Pick the minimum distance vertex from
+                        # the set of vertices not yet processed.
+                        # u is always equal to src in first iteration
+                        u = self.minDistance(dist, sptSet)
+            
+                        # Put the minimum distance vertex in the
+                        # shortest path tree
+                        sptSet[u] = True
+            
+                        # Update dist value of the adjacent vertices
+                        # of the picked vertex only if the current
+                        # distance is greater than new distance and
+                        # the vertex in not in the shortest path tree
+                        for v in range(self.V):
+                            if self.graph[u][v] > 0 and
+                            sptSet[v] == False and
+                            dist[v] > dist[u] + self.graph[u][v]:
+                                dist[v] = dist[u] + self.graph[u][v]
+            
+                    self.printSolution(dist)
+            
+            
+            # Driver program
+            g = Graph(9)
+            g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+                    [4, 0, 8, 0, 0, 0, 0, 11, 0],
+                    [0, 8, 0, 7, 0, 4, 0, 0, 2],
+                    [0, 0, 7, 0, 9, 14, 0, 0, 0],
+                    [0, 0, 0, 9, 0, 10, 0, 0, 0],
+                    [0, 0, 4, 14, 10, 0, 2, 0, 0],
+                    [0, 0, 0, 0, 0, 2, 0, 1, 6],
+                    [8, 11, 0, 0, 0, 0, 1, 0, 7],
+                    [0, 0, 2, 0, 0, 0, 6, 7, 0]
+                    ]
+            
+            g.dijkstra(0)
+            n
+            # This code is contributed by Divyanshu Mehta
+            
+        </code>
+     </pre>
     </div>
   </div>
 
-  <div>
-    <h2 (click)="toggle($event)">arduino crash course deatil</h2>
+  <div class="mt-8">
+    <h2 (click)="toggle($event)" class="text-align-center">
+      leave finger print
+    </h2>
     <div #accordeon class="hidden">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reiciendis
-        enim magnam iusto aut architecto sint hic natus? Sunt velit ab
-        assumenda, neque et accusantium quisquam ipsum nobis eos exercitationem.
-      </p>
+      <app-create-post></app-create-post>
     </div>
   </div>
 </div>

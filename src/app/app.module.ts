@@ -18,6 +18,9 @@ import { CreatePostComponent } from './modules/main-content/create-post/create-p
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { ProductListComponent } from './modules/product-list/product-list.component';
+import { ProductItemComponent } from './modules/product-list/product-item/product-item.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
     AsideContentComponent,
     CarouselComponent,
     CreatePostComponent,
+    ProductListComponent,
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     FormsModule,
     MatFormFieldModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

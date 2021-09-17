@@ -1,0 +1,12 @@
+:host {
+  width: 100%;
+  text-align: center;
+  background-color: yellow;
+}
+.itemsList {
+  display: flex;
+  flex-direction: column;
+
+  background-color: gainsboro;
+  flex-wrap: wrap;
+}
